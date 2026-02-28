@@ -1,13 +1,9 @@
 import Link from "next/link";
 
-export default async function Page() {
-  const data = await fetch('https://api.vercel.app/blog')
-  const posts = await data.json()
+export default function Page() {
   return (
-    <ul>
-      {posts.map((post) => (
-        <li key={post.id}>{post.title}</li>
-      ))}
-    </ul>
+    <>
+      <h1>Hello Next.js!</h1>
+    </>
   );
 }
