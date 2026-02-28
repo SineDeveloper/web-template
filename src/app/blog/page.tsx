@@ -4,7 +4,7 @@ type Post = {
 };
 
 export default async function Page() {
-  const res = await fetch('https://api.vercel.app/blog');
+  const res = await fetch('https://serverless-wp-ashy.vercel.app/wp-json/wp/v2/posts/');
 
   if (!res.ok) {
     throw new Error('Failed to fetch posts');
